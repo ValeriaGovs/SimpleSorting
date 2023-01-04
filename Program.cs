@@ -11,6 +11,7 @@ namespace SimpleSorting
             int n = 10;
 
 
+
             for (int i =0; i<6; i++)
             {
                 n = n * 10;
