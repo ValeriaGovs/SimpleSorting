@@ -18,7 +18,7 @@ namespace Algorithms_LinearSorting
             Stopwatch clock = new Stopwatch();
 
             int count = 0;
-            int n_max = 10; //1_000_000;
+            int n_max = 10_000;// 1_000_000;
             for (int n = 10; n <= n_max; n *= 10)
             {
 
@@ -27,7 +27,7 @@ namespace Algorithms_LinearSorting
                 var unsort = new int[n];
                 for (int i = 0; i < n; i++)
                 {
-                    unsort[i] = r.Next(0, 999);
+                    unsort[i] = r.Next(0, n);
                 }
 
                 clock.Start();

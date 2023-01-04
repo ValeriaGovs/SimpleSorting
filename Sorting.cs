@@ -31,7 +31,7 @@ namespace SimpleSorting
                 }
 
 
-            printMass(mass);
+            //printMass(mass);
 
         }
 
@@ -59,7 +59,7 @@ namespace SimpleSorting
                 }
             }
 
-            printMass(mass);
+            //printMass(mass);
         }
 
         public  void InsertionSortImproved(int[] mass)
@@ -90,7 +90,7 @@ namespace SimpleSorting
             }
 
 
-            printMass(mass);
+            //printMass(mass);
         }
 
 
@@ -114,7 +114,7 @@ namespace SimpleSorting
 
 
 
-            printMass(mass);
+            //printMass(mass);
         }
 
 
