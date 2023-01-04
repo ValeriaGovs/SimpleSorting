@@ -18,7 +18,7 @@ namespace Algorithms_LinearSorting
             Stopwatch clock = new Stopwatch();
 
             int count = 0;
-            int n_max = 10_000;// 1_000_000;
+            int n_max = 100_000;// 1_000_000;
             for (int n = 10; n <= n_max; n *= 10)
             {
 

@@ -71,13 +71,8 @@ namespace SimpleSorting
                 int n_min = i + 1;
                 var inserted = mass[n_min];
 
-                for (int j = i; j >= 0; j--)
+                for (int j = i; j >= 0 && mass[j] > inserted; j--) 
                 {
-
-                    if (mass[j] <= inserted)
-                    {
-                        break;
-                    }
 
                     mass[j + 1] = mass[j];
                     n_min = j;
@@ -90,7 +85,7 @@ namespace SimpleSorting
             }
 
 
-            //printMass(mass);
+           // printMass(mass);
         }
 
 
