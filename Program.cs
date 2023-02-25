@@ -14,8 +14,9 @@ namespace SimpleSorting
             t.Test(s.BubbleSort, "BubbleSort");
             t.Test(s.InsertionSort, "InsertionSort");
             t.Test(s.InsertionSortImproved  , "InsertionSortImproved");
+            t.Test(s.SelectionSort, "SelectionSort");
             t.Test(s.ShellSort, "ShellSort");
-
+            t.Test(s.HeapSort, "HeapSort");
 
         }
 
