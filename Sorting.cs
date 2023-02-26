@@ -9,14 +9,15 @@ namespace SimpleSorting
     public class Sorting
     {
 
-        public  void ShellSort(int[] mass)
+        public  void ShellSort(int[] mass, int variant)
         {
 
+            int del = variant;
 
             int i, j, step;
             int tmp;
             int n = mass.Length;
-            for (step = n / 2; step > 0; step /= 2)
+            for (step = n / del; step > 0; step /= del)
                 for (i = step; i < n; i++)
                 {
                     tmp = mass[i];
@@ -34,8 +35,9 @@ namespace SimpleSorting
             //printMass(mass);
 
         }
+  
 
-        public  void InsertionSort(int[] mass)
+        public  void InsertionSort(int[] mass, int variant)
         {
 
 
@@ -62,7 +64,7 @@ namespace SimpleSorting
             //printMass(mass);
         }
 
-        public  void InsertionSortImproved(int[] mass)
+        public  void InsertionSortImproved(int[] mass, int variant)
         {
 
 
@@ -89,7 +91,7 @@ namespace SimpleSorting
         }
 
 
-        public  void BubbleSort(int[] mass)
+        public  void BubbleSort(int[] mass, int variant)
         {
             for (int j = 0; j < mass.Length; j++)
             {
@@ -110,18 +112,23 @@ namespace SimpleSorting
         }
 
 
-        private static void printMass(int[] mass)
+
+        public void SelectionSort(int[] mass, int variant)
         {
-            foreach (int i in mass)
+
+
+            int indMax = FindMax(mass, mass.Length);
+            for (int i = mass.Length - 1; i >= 0; i--)
             {
-                Console.Write($"{i} ");
+                swap(indMax, i, mass);
+                indMax = FindMax(mass, i);
             }
-            Console.WriteLine(" ");
+
+
         }
 
 
-
-        public void HeapSort(int[] mass)
+        public void HeapSort(int[] mass, int variant)
         {
 
             for (int root = mass.Length / 2 - 1; root >= 0; root--)
@@ -150,20 +157,6 @@ namespace SimpleSorting
 
 
 
-        public  void SelectionSort(int[] mass)
-        {
-
-
-            int indMax = FindMax(mass, mass.Length);
-            for (int i = mass.Length - 1; i >= 0; i--)
-            {
-                swap(indMax, i, mass);
-                indMax = FindMax(mass, i);
-            }
-
-
-        }
-
         private static void swap(int indMax, int i, int[] mass)
         {
             int k = mass[i];
@@ -184,6 +177,16 @@ namespace SimpleSorting
                 }
             }
             return ind_max;
+        }
+
+
+        private static void printMass(int[] mass)
+        {
+            foreach (int i in mass)
+            {
+                Console.Write($"{i} ");
+            }
+            Console.WriteLine(" ");
         }
 
     }

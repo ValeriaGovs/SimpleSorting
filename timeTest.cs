@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+
 
 namespace Algorithms_LinearSorting
 {
     public class timeTest
     {
-        public void Test(func f, string funcName)
+        public void Test(func f, string funcName, int variant )
         {
+
             Console.WriteLine($" ");
             Console.WriteLine($" ");
 
@@ -33,13 +33,11 @@ namespace Algorithms_LinearSorting
                 clock.Start();
 
                 // our action
-                f(unsort);
+                f(unsort, variant);
 
 
                 Console.Write($" до {n}  {funcName}: {count}");
                 clock.Stop();
-
-
 
 
                 TimeSpan ts = clock.Elapsed;
@@ -49,6 +47,7 @@ namespace Algorithms_LinearSorting
                 Console.WriteLine($"{elapsedTime} ");
             }
         }
-        public delegate void func(int[] m);
+        public delegate void func(int[] m, int variant);
+
     }
 }
