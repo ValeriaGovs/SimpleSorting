@@ -9,10 +9,10 @@ namespace SimpleSorting
     public class Sorting
     {
 
-        public  void ShellSort(int[] mass, int variant)
+        public  void ShellSort(int[] mass)
         {
 
-            int del = variant;
+            int del = 2;
 
             int i, j, step;
             int tmp;
@@ -37,7 +37,7 @@ namespace SimpleSorting
         }
   
 
-        public  void InsertionSort(int[] mass, int variant)
+        public  void InsertionSort(int[] mass)
         {
 
 
@@ -64,7 +64,7 @@ namespace SimpleSorting
             //printMass(mass);
         }
 
-        public  void InsertionSortImproved(int[] mass, int variant)
+        public  void InsertionSortImproved(int[] mass)
         {
 
 
@@ -91,7 +91,7 @@ namespace SimpleSorting
         }
 
 
-        public  void BubbleSort(int[] mass, int variant)
+        public  void BubbleSort(int[] mass)
         {
             for (int j = 0; j < mass.Length; j++)
             {
@@ -113,7 +113,7 @@ namespace SimpleSorting
 
 
 
-        public void SelectionSort(int[] mass, int variant)
+        public void SelectionSort(int[] mass)
         {
 
 
@@ -128,7 +128,7 @@ namespace SimpleSorting
         }
 
 
-        public void HeapSort(int[] mass, int variant)
+        public void HeapSort(int[] mass)
         {
 
             for (int root = mass.Length / 2 - 1; root >= 0; root--)

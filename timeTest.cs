@@ -8,7 +8,7 @@ namespace Algorithms_LinearSorting
 {
     public class timeTest
     {
-        public void Test(func f, string funcName, int variant )
+        public void Test(func f, string funcName)
         {
 
             Console.WriteLine($" ");
@@ -33,7 +33,7 @@ namespace Algorithms_LinearSorting
                 clock.Start();
 
                 // our action
-                f(unsort, variant);
+                f(unsort);
 
 
                 Console.Write($" до {n}  {funcName}: {count}");
@@ -47,7 +47,7 @@ namespace Algorithms_LinearSorting
                 Console.WriteLine($"{elapsedTime} ");
             }
         }
-        public delegate void func(int[] m, int variant);
+        public delegate void func(int[] m);
 
     }
 }
